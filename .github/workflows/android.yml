@@ -9,6 +9,8 @@ on:
 jobs:
   apk:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -41,3 +43,12 @@ jobs:
           name: abef-sentiers-apk
           path: abef-sentiers.apk
           retention-days: 30
+
+      # Lien fixe vers la dernière version, à ouvrir sur le téléphone :
+      # https://github.com/<compte>/<dépôt>/releases/download/appli/abef-sentiers.apk
+      - name: Publication de la dernière version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete appli --yes --cleanup-tag || true
+          gh release create appli abef-sentiers.apk --target "$GITHUB_SHA" --title "ABEF Sentiers : dernière version" --notes "Appli Android compilée depuis la version ${GITHUB_SHA::7} (branche ${GITHUB_REF_NAME})."

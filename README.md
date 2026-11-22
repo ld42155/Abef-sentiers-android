@@ -9,7 +9,7 @@ Elle enregistre la trace GPS **écran éteint** et fonctionne **hors ligne** dan
 2. Sur la page du dépôt, cliquez sur **uploading an existing file**. Glissez-y **tout le contenu** de ce dossier, y compris le dossier `.github`. Validez avec **Commit changes**.
    - Sur Mac, le dossier `.github` est masqué dans le Finder : affichez-le avec Cmd + Maj + point.
 3. Ouvrez l'onglet **Actions**. La compilation « Appli Android » démarre toute seule et dure de 5 à 10 minutes.
-4. Quand elle est verte, ouvrez-la et téléchargez **abef-sentiers-apk** en bas de la page. Vous obtenez un zip qui contient `abef-sentiers.apk`.
+4. Quand elle est verte, l'APK est publié dans **Releases** (version « appli »). Sur le téléphone, connecté à GitHub dans Chrome, ouvrez `https://github.com/<compte>/<dépôt>/releases/download/appli/abef-sentiers.apk`.
 
 Si la compilation échoue (croix rouge), ouvrez-la et copiez le message d'erreur à Claude.
 
