@@ -1,0 +1,14 @@
+{
+  "appId": "fr.abef.sentiers",
+  "appName": "ABEF Sentiers",
+  "webDir": "www",
+  "android": {
+    "useLegacyBridge": true
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css",
+      "initialViewportFitValueHint": "cover"
+    }
+  }
+}

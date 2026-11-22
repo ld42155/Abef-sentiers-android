@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ABEF Sentiers</string>
+    <string name="title_activity_main">ABEF Sentiers</string>
+    <string name="package_name">fr.abef.sentiers</string>
+    <string name="custom_url_scheme">fr.abef.sentiers</string>
+    <string name="capacitor_background_geolocation_notification_channel_name">Enregistrement GPS</string>
+    <string name="capacitor_background_geolocation_notification_icon">drawable/ic_tracking</string>
+    <string name="capacitor_background_geolocation_notification_color">#D42B1E</string>
+</resources>
