@@ -1,5 +1,5 @@
 // ABEF Sentiers : la page fonctionne hors ligne (les cartes téléchargées sont gérées par la page)
-const V = 'abef-sentiers-v1';
+const V = 'abef-sentiers-v2';
 const SHELL = ['./', './index.html', './leaflet/leaflet.js', './leaflet/leaflet.css', './capacitor.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('abef-sentiers-') && k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });

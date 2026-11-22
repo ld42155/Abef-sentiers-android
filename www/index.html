@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <meta name="description" content="Tracer un parcours à pied ou à vélo sur tous les chemins (OpenStreetMap et IGN), distance, dénivelé, temps, enregistrement GPS et export GPX.">
-<meta name="theme-color" content="#1b241f">
+<meta name="theme-color" content="#173a2b">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Sentiers">
 <title>ABEF Sentiers</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b241f'/%3E%3Crect x='7' y='9' width='18' height='5' fill='white'/%3E%3Crect x='7' y='18' width='18' height='5' fill='%23d42b1e'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="leaflet/leaflet.css">
@@ -166,7 +166,7 @@ dialog.dlg::backdrop{background:rgba(10,15,12,.45)}
   .grab{display:none}
   .ph{display:block;margin:0 0 12px}
   .ph h1{margin:0;font-size:20px;line-height:1.2;display:flex;align-items:center;gap:10px}
-  .mark{width:22px;height:16px;border-radius:3px;background:linear-gradient(#fff 0 44%,transparent 44% 56%,#d42b1e 56%);box-shadow:0 0 0 1.5px var(--line);flex:none}
+  .mark{width:30px;height:30px;border-radius:8px;flex:none}
   .ph p{margin:2px 0 0;color:var(--mute);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .more,.panel .more{display:block}
   .top,.recbar{left:394px}
@@ -210,7 +210,7 @@ dialog.dlg::backdrop{background:rgba(10,15,12,.45)}
 
 <section class="panel" id="panel" aria-label="Parcours">
   <button type="button" class="grab" id="grab" aria-label="Afficher plus d’options" aria-expanded="false"></button>
-  <header class="ph"><h1><span class="mark" aria-hidden="true"></span>ABEF Sentiers</h1><p id="rname">Nouveau parcours</p></header>
+  <header class="ph"><h1><img class="mark" src="icons/icon-192.png" alt="">ABEF Sentiers</h1><p id="rname">Nouveau parcours</p></header>
   <div class="row">
     <div class="seg" role="group" aria-label="Mode de tracé">
       <button type="button" id="mP" aria-pressed="true" title="Le tracé suit les chemins connus"><span data-ic="path"></span>Chemins</button>
